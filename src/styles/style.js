@@ -9,14 +9,14 @@ border: {
  margin:30,
  padding: 10,
  borderWidth :0.5,
- borderColor: '#fff'
+ borderColor: '#f00'
 
 },
 
 
   container: {
     flex: 1,
-    backgroundColor: '#f00',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -1,23 +1,19 @@
 import React from 'react'
 
-
 import styles from '../styles/style';
 import Form from '../components/Form';
 
-
-
 import { StyleSheet, Text, View } from 'react-native';
-
 
 class TabScreen extends React.Component {
 
 
 
-constructor()  {
+constructor() {
 
 super();
 
-this.submit = this.submit.bind(this,title,post);
+this.submit = this.submit.bind(this);
 }
 
 submit(title, post) {
@@ -43,17 +39,14 @@ if (title && post) {
 
 }
 
-
-
 render() {
 
 return (
 
   <View style={styles.container}>
 
-  <Form />
+  <Form submit={this.submit} />
   </View>
-
 );
 
 }

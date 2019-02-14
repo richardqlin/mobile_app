@@ -7,9 +7,9 @@ import { StyleSheet, Button, View,Text,TextInput  } from 'react-native';
 
 class Form extends React.Component {
 
-constructor(props) {
+constructor() {
 
-super(props);
+super();
 
 
 this.state = {
@@ -19,17 +19,15 @@ this.state = {
 
 };
 
-
 }
 
 handleSubmit() {
 
-    this.props.submit(this,this.state.title, this.state.post);
+    this.props.submit(this.state.title, this.state.post);
 
     this.setState({ title:'title', post:'post' });
 
 }
-
 
 
 render()

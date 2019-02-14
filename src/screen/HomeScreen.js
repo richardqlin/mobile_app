@@ -1,12 +1,9 @@
 import React from 'react'
 
-
 import styles from '../styles/style';
 import Entry from '../components/Entry';
 
-import {  Text, View, FlatList,StyleSheet } from 'react-native';
-
-
+import {  Text, View, FlatList,StyleSheet,Button } from 'react-native';
 
  class HomeScreen extends React.Component {
 
@@ -22,7 +19,7 @@ this.state = {
 };
 
 this.toDetails = this.toDetails.bind(this);
-
+this.handleDelete = this.handleDelete.bind(this);
 }
 
 toDetails(item) {
@@ -32,6 +29,16 @@ this.props.navigation.navigate('Details', item);
 
 }
 
+handleDelete (){
+
+   fetch('https://murmuring-bastion-31969.herokuapp.com/delete', {
+
+            method: 'DELETE'
+
+        }).then(response => {
+         this.props.navigation.navigate('Feed');
+        });
+}
 
 componentDidMount() {
 
@@ -60,7 +67,10 @@ return (
         keyExtractor={item => item['_id']}
         />
 
+        < Button title="DELETE"
 
+        onPress={()=>this.handleDelete()}
+        />
 
       </View>
       );
