@@ -68,6 +68,7 @@ return (
         />
 
         < Button title="DELETE"
+ color = 'red'
 
         onPress={()=>this.handleDelete()}
         />
