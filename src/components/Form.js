@@ -63,6 +63,8 @@ onChangeText={(post) => this.setState({ post: post })}
 
 < Button title="Submit"
 
+color = 'green'
+
 onPress={()=>this.handleSubmit()}
 
 />
