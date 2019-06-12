@@ -12,7 +12,7 @@ render()
 
 return (
 <View style={styles.border }>
-<Text > Hello world </Text>
+
 
   <Button
 
